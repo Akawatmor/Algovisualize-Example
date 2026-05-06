@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "name": "My_NPDA",
+    "type": "NPDA",
+    "pdaAcceptMode": "final-state",
+    "exportedAt": "2026-05-01T07:51:24.941Z"
+  },
+  "nodes": [
+    {
+      "id": "q0",
+      "position": {
+        "x": -67.39388009598218,
+        "y": 26.68203751518162
+      },
+      "isStart": true,
+      "isAccept": false,
+      "data": {
+        "layer": 0
+      }
+    },
+    {
+      "id": "q1",
+      "position": {
+        "x": 200.42751187427365,
+        "y": 27.169251434635328
+      },
+      "isStart": false,
+      "isAccept": false,
+      "data": {
+        "layer": 0
+      }
+    },
+    {
+      "id": "q2",
+      "position": {
+        "x": 488.4403243135082,
+        "y": 29.572488125726338
+      },
+      "isStart": false,
+      "isAccept": false,
+      "data": {
+        "layer": 0
+      }
+    },
+    {
+      "id": "q3",
+      "position": {
+        "x": 743.2855699875292,
+        "y": 34.54595821719596
+      },
+      "isStart": false,
+      "isAccept": true,
+      "data": {
+        "layer": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "q0",
+      "from_con": "R",
+      "to": "q1",
+      "to_con": "L",
+      "label": "a,Z/aaaaZ"
+    },
+    {
+      "from": "q1",
+      "from_con": "T",
+      "to": "q1",
+      "to_con": "R",
+      "label": "a,a/aaaaa"
+    },
+    {
+      "from": "q1",
+      "from_con": "R",
+      "to": "q2",
+      "to_con": "L",
+      "label": "b,a/ε"
+    },
+    {
+      "from": "q2",
+      "from_con": "T",
+      "to": "q2",
+      "to_con": "R",
+      "label": "b,a/ε"
+    },
+    {
+      "from": "q2",
+      "from_con": "R",
+      "to": "q3",
+      "to_con": "L",
+      "label": "ε,Z0/Z0"
+    }
+  ],
+  "annotations": []
+}
