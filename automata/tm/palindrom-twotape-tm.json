@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "name": "My_NTM",
+    "type": "NTM",
+    "tmAcceptMode": "final-state",
+    "tmSettings": {
+      "tapeCount": 2,
+      "headCount": 2,
+      "headToTape": [
+        0,
+        1
+      ],
+      "headTrackMap": [
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "inputMode": "machine",
+      "sheetMode": "linear",
+      "sheetColumns": 8,
+      "ramEnabled": false,
+      "stateStorageEnabled": false
+    },
+    "exportedAt": "2026-05-06T15:59:19.814Z"
+  },
+  "nodes": [
+    {
+      "id": "q0",
+      "position": {
+        "x": -99,
+        "y": 14.5
+      },
+      "isStart": true,
+      "isAccept": false,
+      "data": {
+        "label": "q0",
+        "layer": 0
+      }
+    },
+    {
+      "id": "q1",
+      "position": {
+        "x": 122,
+        "y": 13
+      },
+      "isStart": false,
+      "isAccept": false,
+      "data": {
+        "label": "q1",
+        "layer": 0
+      }
+    },
+    {
+      "id": "q2",
+      "position": {
+        "x": 326,
+        "y": 14
+      },
+      "isStart": false,
+      "isAccept": false,
+      "data": {
+        "label": "q2",
+        "layer": 0
+      }
+    },
+    {
+      "id": "q3",
+      "position": {
+        "x": 529.7419571093574,
+        "y": 13.835330717124656
+      },
+      "isStart": false,
+      "isAccept": true,
+      "data": {
+        "label": "q3",
+        "layer": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "q0",
+      "from_con": "L",
+      "to": "q0",
+      "to_con": "T",
+      "label": "(a,B)/(a,a),(R,R); (b,B)/(b,b),(R,R); "
+    },
+    {
+      "from": "q0",
+      "from_con": "R",
+      "to": "q1",
+      "to_con": "L",
+      "label": "(B,B)/(B,B),(S,L)"
+    },
+    {
+      "from": "q1",
+      "from_con": "R",
+      "to": "q2",
+      "to_con": "L",
+      "label": "(B,B)/(B,B),(L,R)"
+    },
+    {
+      "from": "q1",
+      "from_con": "L",
+      "to": "q1",
+      "to_con": "T",
+      "label": "(B,a)->(B,a),(S,L); (B,b)->(B,b),(S,L)"
+    },
+    {
+      "from": "q2",
+      "from_con": "T",
+      "to": "q2",
+      "to_con": "R",
+      "label": "(b,b)->(b,b),(L,R); (a,a)->(a,a),(L,R)"
+    },
+    {
+      "from": "q2",
+      "from_con": "R",
+      "to": "q3",
+      "to_con": "L",
+      "label": "(B,B)->(B,B),(R,R)"
+    }
+  ],
+  "annotations": []
+}
